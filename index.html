@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<head>
+<title>Катриджи</title>
+<style type="text/css">
+th {
+border: 1px solid #111111;
+background-color: #0088d0;
+padding: 9px;
+}
+.okno {
+    background-color: rgba(0,0,0,0.8);
+    left: 0;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.oknosoderzhimoe {
+    padding: 10px;
+    margin: 20% auto;
+    background-color: #ffffff;
+    width: 70%;
+}
+.knopkaone {
+    float: right;
+    margin: 430px 1500px;
+    position: absolute;
+    padding: 9px;
+}
+.zakritie {
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+}
+.oknotwo {
+    background-color: rgba(0,0,0,0.8);
+    left: 0;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.oknosoderzhimoetwo {
+    padding: 10px;
+    margin: 20% auto;
+    background-color: #ffffff;
+    width: 70%;
+}
+.knopkatwo {
+    float: right;
+    margin: 430px 1500px;
+    position: absolute;
+    padding: 9px;
+}
+.zakritietwo {
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+}
+
+.oknothree {
+    background-color: rgba(0,0,0,0.8);
+    left: 0;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.oknosoderzhimoethree {
+    padding: 10px;
+    margin: 20% auto;
+    background-color: #ffffff;
+    width: 70%;
+}
+.knopkathree {
+    float: right;
+    margin: 430px 1500px;
+    position: absolute;
+    padding: 9px;
+}
+.zakritiethree {
+    cursor: pointer;
+    font-size: 30px;
+    float: right;
+}
+</style>
+</head>
+<body>
+<button id="buton">Откуда</button>
+  <div id="plashka" class="okno">
+   <button type="submit" class="knopkaone">Отправить</button>
+<form class="forma" method="get">
+<input type="text">
+</form>
+<button form="forma" type="submit">жми сюда</button>
+    <div class="oknosoderzhimoe">
+      <span class="zakritie">×</span>
+      <h1>Откуда</h1>
+    </div>
+  </div>
+<button id="buton_two">Ремонт</button>
+  <div id="plashka_two" class="oknotwo">
+   <button type="submit" class="knopkatwo">Отправить</button>
+    <div class="oknosoderzhimoetwo">
+      <span class="zakritietwo">×</span>
+      <h1>Что отправить</h1>
+    </div>
+  </div>
+<button id="buton_three">Прием</button>
+  <div id="plashka_three" class="oknothree">
+   <button type="submit" class="knopkathree">Отправить</button>
+    <div class="oknosoderzhimoethree">
+      <span class="zakritiethree">×</span>
+      <h1>Что пришло</h1>
+    </div>
+  </div>
+<table>
+<tr>
+<th></th>
+<th>Название</th>
+<th>Дата</th>
+<th>Номер кабинета</th>
+<th>Где сейчас</th>
+</tr>
+<tr>
+<th>1</th>
+<form id="forma" method="post"><th class="forma"></th><form>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<th>2</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<th>3</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+<tr>
+<th>4</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</table>
+<script>
+var okno = document.getElementById("plashka");
+var boo = document.getElementById("buton");
+var super_one = document.getElementsByClassName("zakritie")[0];
+boo.onclick = function () {
+    okno.style.display = "block";
+ }
+ super_one.onclick = function () {
+    okno.style.display = "none";
+ }
+window.onclick = function (event) {
+    if (event.target == okno) {
+        okno.style.display = "none";
+    }
+}
+var oknotwo = document.getElementById("plashka_two");
+var boo_two = document.getElementById("buton_two");
+var super_two = document.getElementsByClassName("zakritietwo")[0];
+boo_two.onclick = function () {
+    oknotwo.style.display = "block";
+ }
+ super_two.onclick = function () {
+    oknotwo.style.display = "none";
+ }
+ window.onclick = function (event) {
+    if (event.target == oknotwo) {
+        oknotwo.style.display = "none";
+    }
+}
+var oknothree = document.getElementById("plashka_three");
+var boo_three = document.getElementById("buton_three");
+var super_three = document.getElementsByClassName("zakritiethree")[0];
+boo_three.onclick = function () {
+    oknothree.style.display = "block";
+ }
+ super_three.onclick = function () {
+    oknothree.style.display = "none";
+ }
+ window.onclick = function (event) {
+    if (event.target == oknothree) {
+        oknothree.style.display = "none";
+    }
+}
+</script>
+</body>
